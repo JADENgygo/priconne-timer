@@ -23,8 +23,10 @@ const Home: NextPage = () => {
     if (counter - 1 === 0) {
       window.clearInterval(id);
       const audio = document.getElementById(voice + 'Audio') as HTMLAudioElement;
+      audio.pause();
       audio.muted = false;
       audio.currentTime = 0;
+      audio.play();
       setId(-1);
       setAlerted(true);
     }
