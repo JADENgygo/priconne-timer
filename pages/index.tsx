@@ -23,7 +23,6 @@ const Home: NextPage = () => {
     if (counter - 1 === 0) {
       window.clearInterval(id);
       const audio = document.getElementById(voice + 'Audio') as HTMLAudioElement;
-      audio.pause();
       audio.muted = false;
       audio.currentTime = 0;
       audio.play();
@@ -40,12 +39,15 @@ const Home: NextPage = () => {
     const peko = document.getElementById('pekoAudio') as HTMLAudioElement;
     peko.muted = true;
     peko.play();
+    peko.pause();
     const kokkoro = document.getElementById('kokkoroAudio') as HTMLAudioElement;
     kokkoro.muted = true;
     kokkoro.play();
+    kokkoro.pause();
     const kyaru = document.getElementById('kyaruAudio') as HTMLAudioElement;
     kyaru.muted = true;
     kyaru.play();
+    kyaru.pause();
 
     const buf = window.setInterval(() => ref.current(), 1000);
     setId(buf);
