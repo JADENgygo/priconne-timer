@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 プリコネツール
               </a>
             </div>
-            <div>画像: &copy; Cygames, Inc.</div>
+            <div>画像/音声 &copy; Cygames, Inc.</div>
           </div>
         </footer>
       </div>
