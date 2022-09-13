@@ -23,7 +23,8 @@ const Home: NextPage = () => {
     if (counter - 1 === 0) {
       window.clearInterval(id);
       const audio = document.getElementById(voice + 'Audio') as HTMLAudioElement;
-      audio.play();
+      audio.muted = false;
+      audio.currentTime = 0;
       setId(-1);
       setAlerted(true);
     }
@@ -35,14 +36,14 @@ const Home: NextPage = () => {
       window.clearInterval(id);
     }
     const peko = document.getElementById('pekoAudio') as HTMLAudioElement;
-    peko.pause();
-    peko.currentTime = 0;
+    peko.muted = true;
+    peko.play();
     const kokkoro = document.getElementById('kokkoroAudio') as HTMLAudioElement;
-    kokkoro.pause();
-    kokkoro.currentTime = 0;
+    kokkoro.muted = true;
+    kokkoro.play();
     const kyaru = document.getElementById('kyaruAudio') as HTMLAudioElement;
-    kyaru.pause();
-    kyaru.currentTime = 0;
+    kyaru.muted = true;
+    kyaru.play();
 
     const buf = window.setInterval(() => ref.current(), 1000);
     setId(buf);
