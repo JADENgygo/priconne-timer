@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <i className="bi bi-twitter"></i>
               </a>
               <a href="https://priconne-portfolio.vercel.app" className="link-dark">
-                プリコネツール
+                闇プリン開発室
               </a>
             </div>
             <div>画像/音声 &copy; Cygames, Inc.</div>
